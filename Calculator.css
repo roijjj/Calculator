@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-grow: 1;
+    
+
+}
+.numpad{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.numpad > div{
+    display: flex;
+    flex-grow: 1;
+    
+
+}
+.numpad > div > button{
+    display: flex;
+    flex-grow: 1;
+    background-color: whitesmoke;
+
+}
+
+
+.operater{
+
+display: flex;
+ flex-direction: column;
+ 
+}
+.operater > button{
+    background-color: darkgray;
+}
