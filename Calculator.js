@@ -27,8 +27,7 @@ function operate(){
         alert("dont divide by zero")
         onclear();
     }else if (num1==''|num2==''|''){
-
-        alert("you should have a veriable and operater and another variable")
+         alert("you should have a veriable and operater and another variable")
     }else{
         if (ope =="+"){
         total = add();
@@ -44,20 +43,26 @@ function operate(){
     }
 }
 
+/*this gets the variables*/
 function numpadclick(num){
+   
+    //clears the vareables if they user already has total
+    if (num2 != ''){
+        onclear();
+    }
+    //checks to see if the cal is on num 1 or 2
     if(ope == ''){
         num1 += num;
-        console.log(num1)
         document.querySelector('h1').textContent = num1;
     }
     else{
         num2 += num;
-        console.log(num2);  
         document.querySelector('h1').textContent = num1+ope+num2;        
     }
-    console.log(ope);
 }
+/*this is called when you pless the operater symbols*/
 function opclick(oper){
+    //check to see if only on operater has been entered in the operation.
     if(ope !=''){
          num1 = operate()
          ope = oper;
@@ -68,14 +73,11 @@ function opclick(oper){
     }
     console.log(ope)
 }
-
+//this clears the calculater
 function onclear(){
-   
-  
     num1 = '';
     num2 = '';
     ope = '';
-    console.log(ope)
     document.querySelector('h1').textContent = "000";
 
 }
